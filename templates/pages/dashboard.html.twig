@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<div class="py-8">
+  <h2 class="text-2xl font-semibold mb-6">Dashboard</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+    <div class="bg-white p-4 rounded-lg shadow">
+      <p class="text-sm text-gray-500">Total Tickets</p>
+      <p id="stat-total" class="text-2xl font-bold mt-2">0</p>
+    </div>
+
+    <div class="bg-white p-4 rounded-lg shadow">
+      <p class="text-sm text-gray-500">Open Tickets</p>
+      <p id="stat-open" class="text-2xl font-bold mt-2">0</p>
+    </div>
+
+    <div class="bg-white p-4 rounded-lg shadow">
+      <p class="text-sm text-gray-500">Resolved Tickets</p>
+      <p id="stat-closed" class="text-2xl font-bold mt-2">0</p>
+    </div>
+  </div>
+
+  <div class="mt-8">
+    <a href="/tickets" class="inline-block bg-blue-600 text-white px-4 py-2 rounded">Manage Tickets</a>
+  </div>
+</div>
+{% endblock %}

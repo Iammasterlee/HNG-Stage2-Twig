@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<section class="relative overflow-hidden mt-6">
+  <!-- hero container -->
+  <div class="max-w-[1440px] mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-16">
+      <div class="space-y-6">
+        <h1 class="text-4xl md:text-5xl font-extrabold">
+          Sell and manage tickets with ease
+        </h1>
+        <p class="text-gray-600 max-w-xl">
+          A simple ticketing app demonstration — authentication, dashboard, and full CRUD. Start by logging in or creating an account.
+        </p>
+
+        <div class="flex gap-3">
+          <a href="/auth/login" class="bg-blue-600 text-white px-5 py-3 rounded shadow hover:bg-blue-700">Login</a>
+          <a href="/auth/signup" class="border border-blue-600 text-blue-600 px-5 py-3 rounded hover:bg-blue-50">Get Started</a>
+        </div>
+      </div>
+
+      <div class="relative">
+        <!-- card boxes & decorative circles -->
+        <div class="bg-white rounded-xl shadow-lg p-6">
+          <h3 class="font-semibold">Featured Event</h3>
+          <p class="text-gray-600 mt-2">Concert • Dec 20, 2025</p>
+          <div class="mt-4">
+            <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Open</span>
+          </div>
+        </div>
+
+        <!-- decorative circle -->
+        <div class="absolute -right-8 -top-8 w-28 h-28 rounded-full bg-blue-200 opacity-60"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- wavy SVG bottom -->
+  <div class="mt-8">
+    <svg viewBox="0 0 1440 120" class="w-full" preserveAspectRatio="none">
+      <path d="M0,32 C120,112 360,0 720,48 C1080,96 1320,24 1440,56 L1440 120 L0 120 Z" fill="#0099FF"></path>
+    </svg>
+  </div>
+</section>
+
+<section class="py-12">
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h4 class="font-semibold">Create events</h4>
+      <p class="mt-2 text-gray-600">Add and manage events and tickets easily.</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h4 class="font-semibold">Track status</h4>
+      <p class="mt-2 text-gray-600">Open, in-progress and closed tickets with clear statuses.</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h4 class="font-semibold">Responsive</h4>
+      <p class="mt-2 text-gray-600">Accessible and mobile-friendly layouts.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

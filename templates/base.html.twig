@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ title|default('Ticketing App') }}</title>
+  <link href="/public/style.css" rel="stylesheet">
+
+
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+
+  <div class="min-h-screen flex flex-col">
+    <div class="w-full">
+      {% include 'partials/header.html.twig' %}
+    </div>
+
+    <div class="flex-1 max-w-[1440px] w-full mx-auto px-4">
+      {% block content %}{% endblock %}
+    </div>
+
+    {% include 'partials/footer.html.twig' %}
+  </div>
+
+  <div id="toast-root" class="pointer-events-none"></div>
+
+  <script src="/public/app.js"></script>
+</body>
+</html>

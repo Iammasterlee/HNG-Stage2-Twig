@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<div class="max-w-md mx-auto py-16">
+  <div class="bg-white p-6 rounded-lg shadow">
+    <h2 class="text-2xl font-semibold mb-4">Login</h2>
+
+    <form id="login-form" class="space-y-4" onsubmit="return false;">
+      <div>
+        <label class="text-sm font-medium">Email</label>
+        <input id="login-email" type="email" class="mt-1 w-full border rounded p-2" required>
+        <p id="login-email-error" class="text-sm text-red-600 mt-1 hidden"></p>
+      </div>
+
+      <div>
+        <label class="text-sm font-medium">Password</label>
+        <input id="login-password" type="password" class="mt-1 w-full border rounded p-2" required>
+        <p id="login-password-error" class="text-sm text-red-600 mt-1 hidden"></p>
+      </div>
+
+      <div class="flex items-center justify-between">
+        <button id="login-btn" class="bg-blue-600 text-white px-4 py-2 rounded">Login</button>
+        <a href="/auth/signup" class="text-sm text-blue-600">Create account</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

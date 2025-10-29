@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<div class="py-8">
+  <div class="flex items-center justify-between mb-6">
+    <h2 class="text-2xl font-semibold">Ticket Management</h2>
+    <div class="flex items-center gap-3">
+      <button id="create-ticket-btn" class="bg-green-600 text-white px-4 py-2 rounded">Create Ticket</button>
+      <a href="/dashboard" class="text-sm text-gray-600">Back to dashboard</a>
+    </div>
+  </div>
+
+  <div id="ticket-form-wrapper" class="hidden mb-6">
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h3 id="form-title" class="font-semibold mb-2">Create Ticket</h3>
+
+      <form id="ticket-form" onsubmit="return false;" class="space-y-4">
+        <input type="hidden" id="ticket-id">
+        <div>
+          <label class="text-sm font-medium">Title *</label>
+          <input id="ticket-title" type="text" class="mt-1 w-full border rounded p-2" required>
+          <p id="ticket-title-error" class="text-red-600 text-sm mt-1 hidden"></p>
+        </div>
+
+        <div>
+          <label class="text-sm font-medium">Status *</label>
+          <select id="ticket-status" class="mt-1 w-full border rounded p-2" required>
+            <option value="">Select status</option>
+            <option value="open">Open</option>
+            <option value="in_progress">In Progress</option>
+            <option value="closed">Closed</option>
+          </select>
+          <p id="ticket-status-error" class="text-red-600 text-sm mt-1 hidden"></p>
+        </div>
+
+        <div>
+          <label class="text-sm font-medium">Description</label>
+          <textarea id="ticket-description" class="mt-1 w-full border rounded p-2" rows="3"></textarea>
+          <p id="ticket-description-error" class="text-red-600 text-sm mt-1 hidden"></p>
+        </div>
+
+        <div class="flex gap-3">
+          <button id="ticket-save" class="bg-blue-600 text-white px-4 py-2 rounded">Save</button>
+          <button id="ticket-cancel" class="bg-gray-200 px-4 py-2 rounded">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="tickets-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- JS will populate ticket cards here -->
+  </div>
+</div>
+{% endblock %}

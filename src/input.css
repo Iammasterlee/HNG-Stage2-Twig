@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* small helpers */
+.toast {
+  @apply fixed right-4 bottom-6 z-50;
+}
