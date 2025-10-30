@@ -39,4 +39,6 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 EXPOSE 80
 
 # The command to start the services when the container runs
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+# This command replaces ${PORT} in the nginx.conf file with the actual
+# port number from Railway's environment variable, then starts supervisor.
+CMD ["/bin/sh", "-c", "sed -i \"s/\\${PORT}/$PORT/g\" /etc/nginx/nginx.conf && /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf"]
