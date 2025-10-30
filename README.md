@@ -147,7 +147,7 @@ php -S localhost:8000
 - **Design consistency**: All pages use the same `base.html.twig` (max-width 1440px centered), same header/footer, wavy hero design present on landing, card boxes, at least two decorative circles (hero and card), responsive layout.
 - **Accessibility**: Uses semantic labels, form elements, and ensures text is readable; focus states rely on browser defaults + Tailwind.
 
-
+Github Repository : https://github.com/Iammasterlee/HNG-Stage2-Twig
 
 
 
